@@ -1,241 +1,230 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta content='text/html;charset=UTF-8' http-equiv='Content-type'>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet'
+	 type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+	
+	<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8" ></script>
+	<script src="js/jquery.anchor.js" type="text/javascript" charset="utf-8" ></script>
+	
+	<title>Otaner racnela</title>
+</head>
+<body >
+	<a name="topo" id="topo" style="position:relative;top:-100px">
+	<div class="container">
+		<div class="blockApresentation">
+			<div class="sideLeft">
+				<div class="rowButtons">
+					<a class="btnBlog anchorLink" href="#blog">
+						<img src="images/icon_blog.png" style="width:79px;height=72px;" alt="Blog" />
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
+						<div>Blog</div>
+					</a>
+					<a class="btnJobs anchorLink" href="#jobs">
+						<img src="images/icon_jobs.png" style="width:83px;height=73px;" alt="Trabalhos"/>
 
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
+						<div>Portifolio</div>
+					</a>
+					<a class="btnContact anchorLink" href="#contact">
+						<img src="images/icon_contact.png" style="width:83px;height=73px;" alt="Contato"/>
 
+						<div>Contato</div>
+					</a>
+				</div>
+				<div class="rowLogo">
+					<div class="logo_black_part"><span>RENATO ALENCAR</span></div>
+					<div class="logo_blue_part"><span>Desenvolvedor de Aplicações Java e Websites</span></div>
+					
+				</div>
+				<div class="rowSocial">
+					<div class="btn_facebook">
+						<img src="images/icon_facebook.png" style="width:133px;height:51px" alt="Facebook" />
+					</div>
+					<div class="btn_twitter">
+						<img src="images/icon_twitter.png" style="width:133px;height:51px" alt="Twitter"/>
+					</div>
+					<div></div>
+				</div>
+			</div>
+			<div class="sideRight" id="sideRight">
+				<img src="images/lampada.png" style="width:496px;height:600px" alt="Lampada"/>
+					<img src="images/lampada_luz.png" style="width:306px;height:371px"  alt="Luz" class="luz_lampada"/>
+			</div>
+		</div>
+		<div class="blockTitle">
+			<div class="title_bg"></div>
+			<div class="title_shadow"></div>
 
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
+			<div class="title">
+				<span class="title_text_bg"><span class="title_text">BLOG</span></span>
+				<span class="legenda_titulo">ver todos os posts</span>
+				<a name="blog" id="blog">
+			</div>
+		</div>
+		<div class="blockBlog">
+ 			<div class="btn_navegacao"><img src="images/btn_voltar.jpg" /></div>
+			<div class="postBlog">
+				<div class="post_titulo"><span>01/01/2012</span><br/>CONFIGURANDO RUBY, RAILS, MYSQL E GIT NO WINDOWS</div>
+				<div class="post_texto">
+					Configurar o ambiente de desenvolvimento no Windows não é tarefa das mais fáceis. Embora exista o RubyInstaller e o RailsInstaller, existem muitos detalhes que não são tão simples para quem está começando. Um outro problema é que o RailsInstaller não vem com o MySQL instalado, o que não adianta muito e, por isso, vamos configurar manualmente.
+					<br/><br/>Neste artigo, você verá um passo-a-passo de como instalar e configurar o ambiente de desenvolvimento no Windows com Ruby 1.9.3-p0 e Rails 3.2.1, MySQL e Git.
+				</div>
+			</div>
+			<div class="btn_navegacao"><img src="images/btn_avancar.jpg" /></div>
+		</div>
+		<a class="topo anchorLink" href="#topo"><img src="images/topo.png" /></a>
+		<div class="blockTitle">
+			<div class="title_bg"></div>
+			<div class="title_shadow"></div>
+			<a name="jobs" id="jobs">
 
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
+			<div class="title">
+				<span class="title_text_bg"><span class="title_text">PORTIFOLIO</span></span>
+			</div>
+		</div>
+		<div class="blockTrabalhos">
+			<div class="picture_shadow_bg"></div>
+			<div class="pictureWorks">
+				<img src="images/trabalho_1.png">
+			</div>
+			<div class="pictureWorks">
+				<img src="images/trabalho_2.png">
+			</div>
+			<div class="pictureWorks">
+				<img src="images/trabalho_3.png">
+			</div>
+			
+			<div class="pictureWorks">
+				<img src="images/trabalho_3.png">
+			</div>
+			<div class="pictureWorks">
+				<img src="images/trabalho_1.png">
+			</div>
+			<div class="pictureWorks">
+				<img src="images/trabalho_2.png">
+			</div>
+			
+		</div>
+		<a class="topo anchorLink" href="#topo"><img src="images/topo.png" /></a>
+		<div class="blockTitle">
+			<div class="title_bg"></div>
+			<div class="title_shadow"></div>
+			<a name="contact" id="contact">
+			<div class="title">
+				<span class="title_text_bg"><span class="title_text">CONTATO</span></span>
+			</div>
+		</div>
+		<div class="blockContato">
+			<p class="contact_description">Es ajesed enartr em  actoanc chapreen o mulariofor xoiba.</p>
+			<div class="contact_form">
+				<div class="contact_div_top">
+					<div class="selo_div"><img src="images/selo.png" style="width:135px;height:66px;"></div>
+					<div class="btn_enviar_div"><img src="images/btn_enviar.png" style="width:160px;height:46px;"></div>
+				</div>
+				<div class="contact_div_middle">
+					<div class="contact_div_fields_left">
+						<div class="name_field_line">
+							<label to="name">Nome</label><br/>
+							<input type="text" name="name" id="name">
+						</div>
+						<div class="email_field_line">
+							<label to="email">E-mail</label><br/>
+							<input type="text" name="email" id="email">
+						</div>
+						<div class="subject_field_line">
+							<label to="subject">Assunto</label><br/>
+							<input type="text" name="subject" id="subject">
+						</div>
+					</div>
+					<div class="contact_div_fields_right">
+						<div class="name_field_line">
+							<label to="description">Descri&ccedil;&atilde;o</label><br/>
+							<textarea name="description" id="description" ></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="blockRodape">
+			<div class="footer">
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<script type="text/javascript">
+		$(".blockApresentation").text($("img").mouseenter(function() {
+			// alert("sf");
+			$(".luz_lampada").show();
+		}));
+			
+		$(".blockApresentation").text($("img").mouseout(function() {
+			// alert("sf");
+			$(".luz_lampada").hide();
+		}));
+		
+		function titulo_bg_resize () {
+			var windowSize = ($(window).width() < 1024 ? 1024 : $(window).width());
+			$(".title_bg").width(windowSize);
+			var num = (windowSize - $(".title_bg").width()) / 2;
+			$(".title_bg").offset({left: num});
+		}
+		
+		titulo_bg_resize();
+		
+		$(window).on("resize", titulo_bg_resize);
+		
+		
+		function title_shadow_bg_resize () {
+			var windowSize = ($(window).width() < 1024 ? 1024 : $(window).width());
+			$(".title_shadow").width(windowSize);
+			var num = (windowSize - $(".title_shadow").width()) / 2;
+			$(".title_shadow").offset({left: num});
+		}
+		
+		title_shadow_bg_resize();
+		
+		$(window).on("resize", title_shadow_bg_resize);
+		
+		
+		// Resize shadow of Works
+		function works_shadow_bg_resize () {
+			var windowSize = ($(window).width() < 1024 ? 1024 : $(window).width());
+			
+			$(".picture_shadow_bg").width(windowSize);
+			
+			var num = (windowSize - $(".picture_shadow_bg").width()) / 2;
+			$(".picture_shadow_bg").offset({left: num});
+		}
+		
+		works_shadow_bg_resize();
+		
+		
+		
+		$(window).on("resize", works_shadow_bg_resize);
+		
+		// Resize shadow of Footer
+		function footer_shadow_bg_resize () {
+			var windowSize = ($(window).width() < 1024 ? 1024 : $(window).width());
 
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
+			$(".blockRodape").width(windowSize);
 
-      #footer {
-        clear: both;
-      }
+			var num = (windowSize - $(".blockRodape").width()) / 2;
+			$(".blockRodape").offset({left: num});
+		}
 
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
+		footer_shadow_bg_resize();
 
-
-      #header {
-        background-image: url("assets/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-      .filename {
-        font-style: italic;
-      }
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
-              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove <span class="filename">public/index.html</span></h2>
-              <p>Routes are set up in <span class="filename">config/routes.rb</span>.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
+		$(window).on("resize", footer_shadow_bg_resize);
+	
+	</script>
+</body>
 </html>
