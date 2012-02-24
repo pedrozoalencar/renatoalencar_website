@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Ralencar</title>
-  
-</head>
-<body>
-
-<%= yield %>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta content='text/html;charset=UTF-8' http-equiv='Content-type'>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "application", :media => "all", :debug => true %>
+  <%= javascript_include_tag "application", :debug => true%>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
@@ -42,17 +20,17 @@
       <div class="sideLeft">
         <div class="rowButtons">
           <a class="btnBlog anchorLink" href="#blog">
-            <img src="images/icon_blog.png" style="width:79px;height=72px;" alt="Blog" />
+            <%= image_tag "icon_blog.png", :size=>"79x72", :alt=>"Blog" %>
 
             <div>Blog</div>
           </a>
           <a class="btnJobs anchorLink" href="#jobs">
-            <img src="images/icon_jobs.png" style="width:83px;height=73px;" alt="Trabalhos"/>
+            <%= image_tag "icon_jobs.png", :size=>"83x73", :alt=>"Trabalhos" %>
 
             <div>Portifolio</div>
           </a>
           <a class="btnContact anchorLink" href="#contact">
-            <img src="images/icon_contact.png" style="width:83px;height=73px;" alt="Contato"/>
+            <%= image_tag "icon_contact.png", :size=>"83x73", :alt=>"Contato" %>
 
             <div>Contato</div>
           </a>
@@ -64,17 +42,18 @@
         </div>
         <div class="rowSocial">
           <div class="btn_facebook">
-            <img src="images/icon_facebook.png" style="width:133px;height:51px" alt="Facebook" />
+            <%= image_tag "icon_facebook.png", :size=>"133x51", :alt=>"Facebook" %>
           </div>
           <div class="btn_twitter">
-            <img src="images/icon_twitter.png" style="width:133px;height:51px" alt="Twitter"/>
+            <%= image_tag "icon_twitter.png", :size=>"133x51", :alt=>"Twitter" %>
+
           </div>
           <div></div>
         </div>
       </div>
       <div class="sideRight" id="sideRight">
-        <img src="images/lampada.png" style="width:496px;height:600px" alt="Lampada"/>
-          <img src="images/lampada_luz.png" style="width:306px;height:371px"  alt="Luz" class="luz_lampada"/>
+        <%= image_tag "lampada.png", :size=>"496x600", :alt=>"Lampada" %>
+        <%= image_tag "lampada_luz.png", :size=>"306x371", :alt=>"Luz", :class=>"luz_lampada" %>
       </div>
     </div>
     <div class="blockTitle">
@@ -88,17 +67,13 @@
       </div>
     </div>
     <div class="blockBlog">
-       <div class="btn_navegacao"><img src="images/btn_voltar.jpg" /></div>
+       <div class="btn_navegacao"><%= image_tag "btn_voltar.jpg", :alt=>"Voltar" %></div>
       <div class="postBlog">
-        <div class="post_titulo"><span>01/01/2012</span><br/>CONFIGURANDO RUBY, RAILS, MYSQL E GIT NO WINDOWS</div>
-        <div class="post_texto">
-          Configurar o ambiente de desenvolvimento no Windows não é tarefa das mais fáceis. Embora exista o RubyInstaller e o RailsInstaller, existem muitos detalhes que não são tão simples para quem está começando. Um outro problema é que o RailsInstaller não vem com o MySQL instalado, o que não adianta muito e, por isso, vamos configurar manualmente.
-          <br/><br/>Neste artigo, você verá um passo-a-passo de como instalar e configurar o ambiente de desenvolvimento no Windows com Ruby 1.9.3-p0 e Rails 3.2.1, MySQL e Git.
-        </div>
+        <%= yield :post %>
       </div>
-      <div class="btn_navegacao"><img src="images/btn_avancar.jpg" /></div>
+      <div class="btn_navegacao"><%= image_tag "btn_avancar.jpg", :alt=>"Avancar" %></div>
     </div>
-    <a class="topo anchorLink" href="#topo"><img src="images/topo.png" /></a>
+    <a class="topo anchorLink" href="#topo"><%= image_tag "topo.png", :alt=>"Topo" %></a>
     <div class="blockTitle">
       <div class="title_bg"></div>
       <div class="title_shadow"></div>
@@ -111,27 +86,27 @@
     <div class="blockTrabalhos">
       <div class="picture_shadow_bg"></div>
       <div class="pictureWorks">
-        <img src="images/trabalho_1.png">
+        <%= image_tag "trabalho_1.png", :alt=>"Trabalho1" %>
       </div>
       <div class="pictureWorks">
-        <img src="images/trabalho_2.png">
+        <%= image_tag "trabalho_2.png", :alt=>"Trabalho1" %>
       </div>
       <div class="pictureWorks">
-        <img src="images/trabalho_3.png">
+        <%= image_tag "trabalho_3.png", :alt=>"Trabalho1" %>
       </div>
 
       <div class="pictureWorks">
-        <img src="images/trabalho_3.png">
+        <%= image_tag "trabalho_3.png", :alt=>"Trabalho1" %>
       </div>
       <div class="pictureWorks">
-        <img src="images/trabalho_1.png">
+        <%= image_tag "trabalho_1.png", :alt=>"Trabalho2" %>
       </div>
       <div class="pictureWorks">
-        <img src="images/trabalho_2.png">
+        <%= image_tag "trabalho_2.png", :alt=>"Trabalho2" %>
       </div>
 
     </div>
-    <a class="topo anchorLink" href="#topo"><img src="images/topo.png" /></a>
+    <a class="topo anchorLink" href="#topo"><%= image_tag "topo.png", :alt=>"Topo" %></a>
     <div class="blockTitle">
       <div class="title_bg"></div>
       <div class="title_shadow"></div>
@@ -144,8 +119,8 @@
       <p class="contact_description">Es ajesed enartr em  actoanc chapreen o mulariofor xoiba.</p>
       <div class="contact_form">
         <div class="contact_div_top">
-          <div class="selo_div"><img src="images/selo.png" style="width:135px;height:66px;"></div>
-          <div class="btn_enviar_div"><img src="images/btn_enviar.png" style="width:160px;height:46px;"></div>
+          <div class="selo_div"><%= image_tag "selo.png", :size=>"135x66", :alt=>"Selo" %></div>
+          <div class="btn_enviar_div"><%= image_tag "btn_enviar.png", :size=>"160x46", :alt=>"Selo" %></div>
         </div>
         <div class="contact_div_middle">
           <div class="contact_div_fields_left">
