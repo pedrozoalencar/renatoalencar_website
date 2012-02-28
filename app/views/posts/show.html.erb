@@ -1,6 +1,8 @@
 <% content_for :post do %>
-<div class="post_titulo"><span><%= @post.date.strftime("%d/%m/%Y") %></span><br/><%=@post.title %></div>
-<div class="post_texto">
-  <%= raw(@post.content) %>
-</div>
+<li class="jcarousel-item-1">
+  <div class="post_titulo"><span><%= @post.date.strftime("%d/%m/%Y") %></span><br/><%=@post.title %></div>
+  <div class="post_texto">
+    <%= raw(@post.content) %>
+  </div>
+</li>
 <% end %>

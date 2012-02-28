@@ -1,5 +1,11 @@
 Ralencar::Application.routes.draw do
-  resources :posts
+  resources :posts do
+    member do
+      get 'hasNext'
+      get 'to'
+      get 'count'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -7,7 +13,8 @@ Ralencar::Application.routes.draw do
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
-
+  match 'posts/:first/to/:last', :controller => 'posts', :action => 'find'
+  
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
@@ -52,7 +59,7 @@ Ralencar::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   
-  root :to => 'posts#index'
+  root :to => 'posts#last'
 
   # See how all your routes lay out with "rake routes"
 

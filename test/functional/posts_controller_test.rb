@@ -3,6 +3,7 @@ require 'test_helper'
 class PostsControllerTest < ActionController::TestCase
   setup do
     @post = posts(:one)
+   
   end
 
   test "should get index" do
@@ -11,39 +12,50 @@ class PostsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:posts)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  test "should create post" do
-    assert_difference('Post.count') do
-      post :create, post: @post.attributes
-    end
-
-    assert_redirected_to post_path(assigns(:post))
-  end
 
   test "should show post" do
     get :show, id: @post
     assert_response :success
   end
+  
+  test "should route to post hasNext" do
+    assert_routing '/posts/980190961/hasNext', 
+    { 
+      :controller => "posts", 
+      :action => "hasNext", 
+      :id => "980190961" 
+    }
+  end
+  
+  test "should route to post find" do
+    assert_routing '/posts/1/to/2', 
+    { 
+      :controller => "posts", 
+      :action => "find", 
+      :first => "1",
+      :last => "2"
+    }
+  end
+  
+  test "should route to post count" do
+    assert_routing '/posts/all/count', 
+    { 
+      :controller => "posts", 
+      :action => "count"  
+    }
+  end
+  
+  
+  test "should get boolean true has next post" do
+    
+    get :hasNext,:format => :json, id: 980190961
 
-  test "should get edit" do
-    get :edit, id: @post
-    assert_response :success
+    assert_equal true, json_response['hasNext']
   end
 
-  test "should update post" do
-    put :update, id: @post, post: @post.attributes
-    assert_redirected_to post_path(assigns(:post))
+  test "should get boolean false in invalid post" do
+    get :hasNext, :format => :json, id: 99999999999
+    assert_equal false, json_response['hasNext']
   end
-
-  test "should destroy post" do
-    assert_difference('Post.count', -1) do
-      delete :destroy, id: @post
-    end
-
-    assert_redirected_to posts_path
-  end
+  
 end

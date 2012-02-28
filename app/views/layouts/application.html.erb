@@ -67,11 +67,9 @@
       </div>
     </div>
     <div class="blockBlog">
-       <div class="btn_navegacao"><%= image_tag "btn_voltar.jpg", :alt=>"Voltar" %></div>
-      <div class="postBlog">
-        <%= yield :post %>
-      </div>
-      <div class="btn_navegacao"><%= image_tag "btn_avancar.jpg", :alt=>"Avancar" %></div>
+        <ul class="jcarousel-skin-ralencar">
+          <%= yield :post %>
+        </ul>
     </div>
     <a class="topo anchorLink" href="#topo"><%= image_tag "topo.png", :alt=>"Topo" %></a>
     <div class="blockTitle">
@@ -219,6 +217,76 @@
     footer_shadow_bg_resize();
 
     $(window).on("resize", footer_shadow_bg_resize);
+
+
+    function itemLoadCallback(carousel, state)
+    {
+        // Check if the requested items already exist
+        if (carousel.has(carousel.first, carousel.last)) {
+          $.ajax({
+            url:'/posts/'+carousel.first+'/to/'+carousel.last, 
+            dataType: "json", 
+            success: function(data){
+              itemAddCallback(carousel, carousel.first, carousel.last, xml);
+            }
+          });
+          return;
+        };
+    };
+
+    function itemAddCallback(carousel, first, last, json)
+    {
+        // Set the size of the carousel
+        //carousel.size(parseInt(jQuery('total', xml).text()));
+
+        $(json).each(function(index,obj) {
+            carousel.add(first + index, getItemHTML(obj));
+        });
+    };
+
+    /**
+     * Item html creation helper.
+     */
+    function getItemHTML(obj)
+    {
+        return '<img src="' + url + '" width="75" height="75" alt="" />';
+    };
+
+    $(document).ready(function() {
+      
+      //get amount posts
+      $.ajax({
+        url:'/posts/all/count', 
+        dataType: "json", 
+        success: function(data){
+          $('.jcarousel-skin-ralencar').jcarousel({
+            size: data
+            // itemVisibleOutCallback: {onAfterAnimation: function(carousel, item, i, state, evt) { carousel.remove(i); }},
+            itemLoadCallback: itemLoadCallback;
+          });        
+        }
+      });
+
+      
+      
+      
+
+
+      ConstructorPoolPost.init(1,"post");
+
+      //Call anchor of solicited resource 
+      var url = $(location).attr('href');
+
+      if( url.indexOf('/posts/') > -1 ) {
+        $('.btnBlog').click();
+      }
+      else if( url.indexOf('/portifolio/') > -1 ) {
+        $('.btnPortifolio').click();
+      }
+      else if( url.indexOf('/contatos/') > -1 ) {
+        $('.btnContato').click();
+      }
+    });
 
   </script>
 </body>
