@@ -62,7 +62,7 @@
 
       <div class="title">
         <span class="title_text_bg"><span class="title_text">BLOG</span></span>
-        <span class="legenda_titulo">ver todos os posts</span>
+        <span class="legenda_titulo"><a href="/posts/">ver todos os posts<a/></span>
         <a name="blog" id="blog">
       </div>
     </div>
@@ -217,63 +217,19 @@
     footer_shadow_bg_resize();
 
     $(window).on("resize", footer_shadow_bg_resize);
+    
+    
+    <%= yield :post_javascript %>
 
-
-    function itemLoadCallback(carousel, state)
-    {
-        // Check if the requested items already exist
-        if (carousel.has(carousel.first, carousel.last)) {
-          $.ajax({
-            url:'/posts/'+carousel.first+'/to/'+carousel.last, 
-            dataType: "json", 
-            success: function(data){
-              itemAddCallback(carousel, carousel.first, carousel.last, xml);
-            }
-          });
-          return;
-        };
-    };
-
-    function itemAddCallback(carousel, first, last, json)
-    {
-        // Set the size of the carousel
-        //carousel.size(parseInt(jQuery('total', xml).text()));
-
-        $(json).each(function(index,obj) {
-            carousel.add(first + index, getItemHTML(obj));
-        });
-    };
-
-    /**
-     * Item html creation helper.
-     */
-    function getItemHTML(obj)
-    {
-        return '<img src="' + url + '" width="75" height="75" alt="" />';
-    };
-
+      
     $(document).ready(function() {
-      
-      //get amount posts
-      $.ajax({
-        url:'/posts/all/count', 
-        dataType: "json", 
-        success: function(data){
-          $('.jcarousel-skin-ralencar').jcarousel({
-            size: data
-            // itemVisibleOutCallback: {onAfterAnimation: function(carousel, item, i, state, evt) { carousel.remove(i); }},
-            itemLoadCallback: itemLoadCallback;
-          });        
-        }
+      //Replace href links to javascript links
+      $('.legenda_titulo').click(function() {
+        window.carousel.scroll(1);
+        return false;    
       });
-
       
       
-      
-
-
-      ConstructorPoolPost.init(1,"post");
-
       //Call anchor of solicited resource 
       var url = $(location).attr('href');
 

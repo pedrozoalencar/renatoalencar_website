@@ -332,7 +332,29 @@
                     this.buttons();
                 }
             }
-
+        
+            return this.options.size;
+        },
+        
+        /**
+         * Sets the size of the carousel.
+         *
+         * @method size
+         * @return undefined
+         * @param s {Number} The size of the carousel.
+         */
+        resize: function(s) {
+            if (s !== undefined) {
+                this.options.size = s;
+                if (!this.locked) {
+                    this.buttons();
+                    
+                    // for(i = 0; i < s; i++) {
+                    //   this.add(i,"<p></p>")
+                    // }
+                }
+            }
+        
             return this.options.size;
         },
 

@@ -3,31 +3,56 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-
-    @posts = Post.all
+    @post = Post.order("date DESC").last
+    @count = Post.all.count
+    @num_nexts = Post.where("date > :post_date", {:post_date => @post.date}).count
+    @index_of = 0
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @posts }
+      format.json { render json: @post }
     end
+
   end
   
   # GET /posts/count
   def count
-
+  
     @posts = Post.all.count
-
+  
     respond_to do |format|
       format.json { render json: @posts }
     end
-  end
+  end	
 
+  # GET /posts/menu
+  def menu
+  
+    @posts = Post.order("date DESC")
+  
+    respond_to do |format|
+      format.json { render json: @posts }
+    end
+  end	
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.find(params[:id])
-
+    if params[:id]
+      @post = Post.find(params[:id]) 
+    else
+      @post = Post.order("date DESC").last
+    end
+    
+    @count = Post.all.count
+    @num_nexts = Post.where("date > :post_date", {:post_date => @post.date}).count
+    
+    if params[:index_of]
+      @index_of = params[:index_of]
+    else
+      @index_of = @count - @num_nexts
+    end
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
@@ -38,7 +63,7 @@ class PostsController < ApplicationController
     @post = Post.last
 
     respond_to do |format|
-      format.html { render 'posts/show'}# show.html.erb
+      format.html # last.html.erb
       format.json { render json: @post }
     end
   end
@@ -49,6 +74,23 @@ class PostsController < ApplicationController
       format.json { 
         render json: {
           :hasNext => @hasNext
+        }
+      }
+    end
+  end
+  
+  def index_of
+    @count = Post.all.count
+    post = Post.find(params[:id])
+    @num_nexts = Post.where("date > :post_date", {:post_date => post.date}).count
+    @index_of = @count - @num_nexts
+    
+    respond_to do |format|
+      format.json { 
+        render json: {
+          :count => @count, 
+          :num_nexts => @num_nexts,
+          :index_of => @index_of
         }
       }
     end
@@ -79,7 +121,7 @@ class PostsController < ApplicationController
       else
         amount = params[:last].to_i - params[:first].to_i + 1
       end
-      @posts = Post.order("date DESC").offset(params[:first]).limit(amount)
+      @posts = Post.order("date DESC").offset(params[:first].to_i-1).limit(amount)
     else 
       @posts = Post.find_all
     end

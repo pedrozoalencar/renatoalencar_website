@@ -13,6 +13,10 @@ group :development do
 	gem 'sqlite3'
 end
 
+group :test, :development do
+	gem "rspec-rails", "~> 2.8"
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.

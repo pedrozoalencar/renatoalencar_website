@@ -1,0 +1,86 @@
+<% content_for :post do %>
+<% end %>
+
+
+<% content_for :post_javascript do %>
+function loaderItemsCarousel(size) {
+  
+  for(var i = 1; i <= size; i++) {
+    first = i;
+    last = i;
+    
+    itemLoadCallback(window.carousel,null,first,last);
+    window.carousel.size(window.carousel.size()+1);
+    
+    
+  }
+}
+
+function initCallback(carousel,state) {
+  window.carousel = carousel;
+}
+
+function itemLoadCallback1(carousel, state)
+{
+  itemLoadCallback(carousel, state, carousel.first, carousel.last)
+}
+
+function itemLoadCallback(carousel, state,first, last)
+{
+    // Check if the requested items already exist
+    //if (carousel.has(first, last)) {
+    //  return;
+    //};
+    
+    $.ajax({
+      url:'/posts/'+first+'/to/'+last, 
+      dataType: "json", 
+      success: function(data){
+        itemAddCallback(carousel, first, last, data);
+      }  
+    });
+};
+
+function itemAddCallback(carousel, first, last, json)
+{
+    // Set the size of the carousel
+    //carousel.size(parseInt(jQuery('total', xml).text()));
+
+    $(json).each(function(index,obj) {
+        carousel.add(first + index, getItemHTML(obj));
+    });
+};
+
+/**
+ * Item html creation helper.
+ */
+function getItemHTML(post)
+{
+    var html = '<li class="jcarousel-item-'+post.id+'">'+
+      '<div class="post_titulo"><span>'+new Date(post.date).format('dd/m/yy')+'</span><br/>'+post.title+'</div>'+
+      '<div class="post_texto">'+
+        post.content +
+      '</div>' +
+    '</li>';
+    
+    return html;
+};
+
+$(document).ready(function() {
+  $('.jcarousel-skin-ralencar').jcarousel({
+    scroll: 1,
+    // itemVisibleOutCallback: {onAfterAnimation: function(carousel, item, i, state, evt) { carousel.remove(i); }},
+    //itemLoadCallback: itemLoadCallback1,
+    initCallback: initCallback,
+  });
+  
+  //get amount posts
+  $.ajax({
+    url:'/posts/all/count', 
+    dataType: "json", 
+    success: function(data){
+      loaderItemsCarousel(data);         
+    }
+  });
+});
+<% end %>

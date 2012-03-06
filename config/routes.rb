@@ -4,6 +4,8 @@ Ralencar::Application.routes.draw do
       get 'hasNext'
       get 'to'
       get 'count'
+      get 'index_of'
+      get 'menu'
     end
   end
 
@@ -14,11 +16,10 @@ Ralencar::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
   match 'posts/:first/to/:last', :controller => 'posts', :action => 'find'
-  
+    
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
@@ -59,7 +60,7 @@ Ralencar::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   
-  root :to => 'posts#last'
+  root :to => 'posts#show'
 
   # See how all your routes lay out with "rake routes"
 

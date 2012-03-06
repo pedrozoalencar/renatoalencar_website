@@ -1,27 +1,21 @@
-<h1>Listing posts</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Date</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.date %></td>
-    <td><%= post.content %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<% content_for :post do %>
 <% end %>
-</table>
 
-<br />
 
-<%= link_to 'New Post', new_post_path %>
+<% content_for :post_javascript do %>
+
+
+$(document).ready(function() {
+
+  $('.jcarousel-skin-ralencar').jcarousel({
+    scroll: 1,
+
+    // itemVisibleOutCallback: {onAfterAnimation: function(carousel, item, i, state, evt) { carousel.remove(i); }},
+    //itemLoadCallback: itemLoadCallback1,
+    initCallback: NewsCarouselLoader.initCallback,
+    size: <%= @count %>,
+    start: <%= @index_of.to_i+1 %>,
+
+  });  
+});
+<% end %>

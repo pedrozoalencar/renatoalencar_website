@@ -1,8 +1,21 @@
 <% content_for :post do %>
-<li class="jcarousel-item-1">
-  <div class="post_titulo"><span><%= @post.date.strftime("%d/%m/%Y") %></span><br/><%=@post.title %></div>
-  <div class="post_texto">
-    <%= raw(@post.content) %>
-  </div>
-</li>
+<% end %>
+
+
+<% content_for :post_javascript do %>
+
+
+$(document).ready(function() {
+    
+  $('.jcarousel-skin-ralencar').jcarousel({
+    scroll: 1,
+    
+    // itemVisibleOutCallback: {onAfterAnimation: function(carousel, item, i, state, evt) { carousel.remove(i); }},
+    //itemLoadCallback: itemLoadCallback1,
+    initCallback: NewsCarouselLoader.initCallback,
+    size: <%= @count %>,
+    start: <%= @index_of.to_i+1 %>,
+    
+  });  
+});
 <% end %>

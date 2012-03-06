@@ -3,6 +3,7 @@ require 'test_helper'
 class PostsControllerTest < ActionController::TestCase
   setup do
     @post = posts(:one)
+    @post_two = posts(:two)
    
   end
 
@@ -10,6 +11,16 @@ class PostsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:posts)
+  end
+  
+  test "should get index_of" do
+    get :index_of, :format => :json, id: 1
+        
+    assert_equal 2, json_response['index_of']
+
+    
+    assert_response :success
+    assert_
   end
 
 
@@ -42,6 +53,14 @@ class PostsControllerTest < ActionController::TestCase
     { 
       :controller => "posts", 
       :action => "count"  
+    }
+  end
+  
+  test "should route to post index_of" do
+    assert_routing '/posts/2/index_of', 
+    { 
+      :controller => "posts", 
+      :action => "index_of"  
     }
   end
   
