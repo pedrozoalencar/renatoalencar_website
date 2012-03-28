@@ -13,7 +13,7 @@
 //= require contact_forms
 //= require date.format
 //= require jobs
-//= require jquery_lib
+//= require jquery_lib 
 //= require main
 //= require posts
 //= require utils
