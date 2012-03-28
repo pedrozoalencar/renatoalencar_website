@@ -1,0 +1,28 @@
+<div class="block">
+<h2>Sign in</h2>
+<div class="content login">
+  <div class="flash">
+    <% flash.each do |type, message| -%>
+      <div class="message <%= type %>">
+        <p><%= message %></p>
+      </div>
+    <% end -%>
+  </div>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "form login" }) do |f| %>
+  <div><%= f.label :email, :class => "label bottom"%>
+  <%= f.email_field :email, :class => "text_field" %></div>
+  <br/>
+  <div><%= f.label :password, :class => "label bottom" %>
+  <%= f.password_field :password, :class => "text_field" %></div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me, :class => "checkbox" %> <%= f.label :remember_me, :class => "checkbox" %></div>
+  <% end -%>
+
+  <div style="margin:15px 0px"><%= f.submit "Sign in" %></div>
+<% end %>
+
+<%= render "links" %>
+</div>
+</div>

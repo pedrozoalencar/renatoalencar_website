@@ -1,270 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta content='text/html;charset=UTF-8' http-equiv='Content-type'>
-  
-  <meta name="description" content="Portifolio, contato e Blog de Tecnologia escritos por Renato Alencar">
-  <meta name="keywords" content="ruby, rails, java, html, javascript, css, jquery, desenvolvimento, web-sites">
-  <meta name="author" content="Renato Alencar">
-  
-  <%= stylesheet_link_tag    "application", :media => "all"%>
-  <%= javascript_include_tag "application"%>
-  <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
-  
-  <script type="text/javascript">
-  
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-29769861-1']);
-    _gaq.push(['_setDomainName', 'renatoalencar.info']);
-    _gaq.push(['_setAllowLinker', true]);
-    _gaq.push(['_trackPageview']);
-  
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  
-  </script>
-  
-  <title>Renato Alencar</title>
+  <title>Web App</title>
+  <%= stylesheet_link_tag 'web_app_theme' %>
+  <%= javascript_include_tag "defaults" %>
+  <%= csrf_meta_tag %>
 </head>
-<body >
-  <a name="topo" id="topo" style="position:relative;top:-100px">
-  <div class="container">
-    <div class="blockApresentation">
-      <div class="sideLeft">
-        <div class="rowButtons">
-          <a class="btnBlog anchorLink" href="#blog">
-            <%= image_tag "icon_blog.png", :size=>"79x72", :alt=>"Blog" %>
-
-            <div>Blog</div>
-          </a>
-          <a class="btnJobs anchorLink" href="#jobs">
-            <%= image_tag "icon_jobs.png", :size=>"83x73", :alt=>"Trabalhos" %>
-
-            <div>Portifolio</div>
-          </a>
-          <a class="btnContact anchorLink" href="#contact">
-            <%= image_tag "icon_contact.png", :size=>"83x73", :alt=>"Contato" %>
-
-            <div>Contato</div>
-          </a>
-        </div>
-        <div class="rowLogo">
-          <div class="logo_black_part"><span>RENATO ALENCAR</span></div>
-          <div class="logo_blue_part"><span>Desenvolvedor de Aplicações Java e Websites</span></div>
-
-        </div>
-        <div class="rowSocial">
-          <div class="btn_facebook">
-            <%= image_tag "icon_facebook.png", :size=>"133x51", :alt=>"Facebook" %>
-          </div>
-          <div class="btn_twitter">
-            <%= image_tag "icon_twitter.png", :size=>"133x51", :alt=>"Twitter" %>
-
-          </div>
-          <div></div>
-        </div>
-      </div>
-      <div class="sideRight" id="sideRight">
-        <%= image_tag "lampada.png", :size=>"496x600", :alt=>"Lampada" %>
-        <%= image_tag "lampada_luz.png", :size=>"306x371", :alt=>"Luz", :class=>"luz_lampada" %>
-      </div>
-    </div>
-    <div class="blockTitle">
-      <div class="title_bg"></div>
-      <div class="title_shadow"></div>
-
-      <div class="title">
-        <span class="title_text_bg"><span class="title_text">BLOG</span></span>
-        <span class="legenda_titulo"><a href="/posts/">ver todos os posts<a/></span>
-        <a name="blog" id="blog">
-      </div>
-    </div>
-    <div class="blockBlog">
-        <ul class="jcarousel-skin-ralencar">
-          <%= yield :post %>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1><a href="/">Web App</a></h1>
+      <div id="user-navigation">
+        <ul class="wat-cf">
+          <li><a href="#"><%= t("web-app-theme.profile", :default => "Profile") %></a></li>
+          <li><a href="#"><%= t("web-app-theme.settings", :default => "Settings") %></a></li>
+          <li><a href="/logout" class="logout"><%= t("web-app-theme.logout", :default => "Logout") %></a></li>
         </ul>
-    </div>
-    <a class="topo anchorLink" href="#topo"><%= image_tag "topo.png", :alt=>"Topo" %></a>
-    <div class="blockTitle">
-      <div class="title_bg"></div>
-      <div class="title_shadow"></div>
-      <a name="jobs" id="jobs">
-
-      <div class="title">
-        <span class="title_text_bg"><span class="title_text">PORTIFOLIO</span></span>
+      </div>
+      <div id="main-navigation">
+        <ul class="wat-cf"></ul>
       </div>
     </div>
-    <div class="blockTrabalhos">
-      <div class="picture_shadow_bg"></div>
-      <div class="pictureWorks">
-        <%= image_tag "trabalho_1.png", :alt=>"Trabalho1" %>
-      </div>
-      <div class="pictureWorks">
-        <%= image_tag "trabalho_2.png", :alt=>"Trabalho1" %>
-      </div>
-      <div class="pictureWorks">
-        <%= image_tag "trabalho_3.png", :alt=>"Trabalho1" %>
-      </div>
-
-      <div class="pictureWorks">
-        <%= image_tag "trabalho_3.png", :alt=>"Trabalho1" %>
-      </div>
-      <div class="pictureWorks">
-        <%= image_tag "trabalho_1.png", :alt=>"Trabalho2" %>
-      </div>
-      <div class="pictureWorks">
-        <%= image_tag "trabalho_2.png", :alt=>"Trabalho2" %>
-      </div>
-
-    </div>
-    <a class="topo anchorLink" href="#topo"><%= image_tag "topo.png", :alt=>"Topo" %></a>
-    <div class="blockTitle">
-      <div class="title_bg"></div>
-      <div class="title_shadow"></div>
-      <a name="contact" id="contact">
-      <div class="title">
-        <span class="title_text_bg"><span class="title_text">CONTATO</span></span>
-      </div>
-    </div>
-    <div class="blockContato">
-      <p class="contact_description">Es ajesed enartr em  actoanc chapreen o mulariofor xoiba.</p>
-      <div class="contact_form">
-        <div class="contact_div_top">
-          <div class="selo_div"><%= image_tag "selo.png", :size=>"135x66", :alt=>"Selo" %></div>
-          <div class="btn_enviar_div"><%= image_tag "btn_enviar.png", :size=>"160x46", :alt=>"Selo" %></div>
-        </div>
-        <div class="contact_div_middle">
-          <div class="contact_div_fields_left">
-            <div class="name_field_line">
-              <label to="name">Nome</label><br/>
-              <input type="text" name="name" id="name">
-            </div>
-            <div class="email_field_line">
-              <label to="email">E-mail</label><br/>
-              <input type="text" name="email" id="email">
-            </div>
-            <div class="subject_field_line">
-              <label to="subject">Assunto</label><br/>
-              <input type="text" name="subject" id="subject">
-            </div>
+    <div id="wrapper" class="wat-cf">
+      <div class="flash">
+        <% flash.each do |type, message| -%>
+          <div class="message <%= type %>">
+            <p><%= message %></p>
           </div>
-          <div class="contact_div_fields_right">
-            <div class="name_field_line">
-              <label to="description">Descri&ccedil;&atilde;o</label><br/>
-              <textarea name="description" id="description" ></textarea>
-            </div>
+        <% end -%>
+      </div>
+      <div id="main">
+        <%= yield %>
+        <div id="footer">
+          <div class="block">
+            <p>Copyright &copy; <%= Time.now.year %> Web App.</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="blockRodape">
-      <div class="footer">
-
+      <div id="sidebar">
+        <%= yield :sidebar %>
       </div>
     </div>
   </div>
-
-
-
-  <script type="text/javascript">
-    $(".blockApresentation").text($("img").mouseenter(function() {
-      // alert("sf");
-      $(".luz_lampada").show();
-    }));
-
-    $(".blockApresentation").text($("img").mouseout(function() {
-      // alert("sf");
-      $(".luz_lampada").hide();
-    }));
-
-    function titulo_bg_resize () {
-      var windowSize = ($(window).width() < 1024 ? 1024 : $(window).width());
-      $(".title_bg").width(windowSize);
-      var num = (windowSize - $(".title_bg").width()) / 2;
-      $(".title_bg").offset({left: num});
-    }
-
-    titulo_bg_resize();
-
-    $(window).on("resize", titulo_bg_resize);
-
-
-    function title_shadow_bg_resize () {
-      var windowSize = ($(window).width() < 1024 ? 1024 : $(window).width());
-      $(".title_shadow").width(windowSize);
-      var num = (windowSize - $(".title_shadow").width()) / 2;
-      $(".title_shadow").offset({left: num});
-    }
-
-    title_shadow_bg_resize();
-
-    $(window).on("resize", title_shadow_bg_resize);
-
-
-    // Resize shadow of Works
-    function works_shadow_bg_resize () {
-      var windowSize = ($(window).width() < 1024 ? 1024 : $(window).width());
-
-      $(".picture_shadow_bg").width(windowSize);
-
-      var num = (windowSize - $(".picture_shadow_bg").width()) / 2;
-      $(".picture_shadow_bg").offset({left: num});
-    }
-
-    works_shadow_bg_resize();
-
-
-
-    $(window).on("resize", works_shadow_bg_resize);
-
-    // Resize shadow of Footer
-    function footer_shadow_bg_resize () {
-      var windowSize = ($(window).width() < 1024 ? 1024 : $(window).width());
-
-      $(".blockRodape").width(windowSize);
-
-      var num = (windowSize - $(".blockRodape").width()) / 2;
-      $(".blockRodape").offset({left: num});
-    }
-
-    footer_shadow_bg_resize();
-
-    $(window).on("resize", footer_shadow_bg_resize);
-    
-    
-    <%= yield :post_javascript %>
-
-      
-    $(document).ready(function() {
-      //Replace href links to javascript links
-      $('.legenda_titulo').click(function() {
-        window.carousel.scroll(1);
-        return false;    
-      });
-      
-      
-      //Call anchor of solicited resource 
-      var url = $(location).attr('href');
-
-      if( url.indexOf('/posts/') > -1 ) {
-        $('.btnBlog').click();
-      }
-      else if( url.indexOf('/portifolio/') > -1 ) {
-        $('.btnPortifolio').click();
-      }
-      else if( url.indexOf('/contatos/') > -1 ) {
-        $('.btnContato').click();
-      }
-    });
-
-  </script>
 </body>
 </html>

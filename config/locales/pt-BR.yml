@@ -1,0 +1,20 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pt-BR:
+  name: "nome"
+  email: "e-mail"
+  subject: "assunto"
+  description: "descrição"
+  activerecord:
+    errors:
+      messages:
+        invalid_email_format: "não parece ser e-mail válido"
+    attributes:
+      contactForm:
+        name: "nome"
+  admin:
+    action:
+      dashboard:
+        menu: "Menu"
+        title: ""

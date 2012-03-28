@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content='text/html;charset=UTF-8' http-equiv='Content-type'>
+
+  <meta name="description" content="Portifolio, contato e Blog de Tecnologia escritos por Renato Alencar">
+  <meta name="keywords" content="ruby, rails, java, html, javascript, css, jquery, desenvolvimento, web-sites">
+  <meta name="author" content="Renato Alencar">
+
+  <%= stylesheet_link_tag    "application", :media => "all"%>
+  <%= javascript_include_tag "application"%>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29769861-1']);
+    _gaq.push(['_setDomainName', 'renatoalencar.info']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+  <title>Renato Alencar</title>
+</head>
+<body >
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+  <a name="topo" id="topo" style="position:relative;top:-100px">
+  <div class="container">
+    <div class="blockApresentation">
+      <div class="sideLeft">
+        <div class="rowButtons">
+          <a class="btnBlog anchorLink" href="#blog">
+            <%= image_tag "icon_blog.png", :size=>"79x72", :alt=>"Blog" %>
+
+            <div>Blog</div>
+          </a>
+          <a class="btnJobs anchorLink" href="#jobs">
+            <%= image_tag "icon_jobs.png", :size=>"83x73", :alt=>"Trabalhos" %>
+
+            <div>Portifolio</div>
+          </a>
+          <a class="btnContact anchorLink" href="#contact">
+            <%= image_tag "icon_contact.png", :size=>"83x73", :alt=>"Contato" %>
+
+            <div>Contato</div>
+          </a>
+        </div>
+        <div class="rowLogo">
+          <div class="logo_black_part"><span>RENATO ALENCAR</span></div>
+          <div class="logo_blue_part"><span>Desenvolvedor de Aplicações Java e Websites</span></div>
+
+        </div>
+        <div class="rowSocial">
+          <a href="http://www.facebook.com/pedrozo.alencar" target="blank">
+            <div class="btn_facebook">
+              <%= image_tag "icon_facebook.png", :size=>"133x51", :alt=>"Facebook" %>
+            </div>
+          </a>
+          <a href="http://www.twitter.com/renatoalencar" target="blank">
+            <div class="btn_twitter">
+              <%= image_tag "icon_twitter.png", :size=>"133x51", :alt=>"Twitter" %>
+            </div>
+          </a>
+          <div></div>
+        </div>
+      </div>
+      <div class="sideRight" id="sideRight">
+        <%= image_tag "lampada.png", :size=>"496x600", :alt=>"Lampada" %>
+        <%= image_tag "lampada_luz.png", :size=>"306x371", :alt=>"Luz", :class=>"luz_lampada" %>
+      </div>
+    </div>
+    <div class="blockTitle">
+      <div class="title_bg"></div>
+      <div class="title_shadow"></div>
+
+      <div class="title">
+        <span class="title_text_bg"><span class="title_text">BLOG</span></span>
+        <span class="legenda_titulo"><a href="/posts/">ver todos os posts<a/></span>
+        <a name="blog" id="blog">
+      </div>
+    </div>
+    <div class="blockBlog">
+        <ul class="jcarousel-skin-ralencar">
+          <%= yield :post %>
+        </ul>
+    </div>
+    <a class="topo anchorLink" href="#topo"><%= image_tag "topo.png", :alt=>"Topo" %></a>
+    <div class="blockTitle">
+      <div class="title_bg"></div>
+      <div class="title_shadow"></div>
+      <a name="jobs" id="jobs">
+
+      <div class="title">
+        <span class="title_text_bg"><span class="title_text">PORTIFOLIO</span></span>
+      </div>
+    </div>
+    <div class="blockTrabalhos">
+      <div class="picture_shadow_bg"></div>
+      <%= render 'jobs/index' %>
+    </div>
+    <a class="topo anchorLink" href="#topo"><%= image_tag "topo.png", :alt=>"Topo" %></a>
+    <div class="blockTitle">
+      <div class="title_bg"></div>
+      <div class="title_shadow"></div>
+      <a name="contact" id="contact">
+      <div class="title">
+        <span class="title_text_bg"><span class="title_text">CONTATO</span></span>
+      </div>
+    </div>
+    <div class="blockContato">
+      <%= render 'contact_forms/form' %>
+    </div>
+    <div class="blockRodape">
+      <div class="footer">
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+   <%= yield :post_javascript %>
+  </script>
+</body>
+</html>

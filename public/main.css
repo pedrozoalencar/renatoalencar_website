@@ -434,3 +434,7 @@ body {
 	height:197px;
 	border: 1px solid #999999;
 }
+
+.tooltip-contact {
+	font-size: 16px;
+}

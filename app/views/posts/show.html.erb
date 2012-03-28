@@ -16,6 +16,50 @@ $(document).ready(function() {
     size: <%= @count %>,
     start: <%= @index_of.to_i+1 %>,
     
-  });  
+  });
+  
+ $("a#single_image").fancybox({
+    'titlePosition'		: 'outside',
+    'transitionIn'	: 'elastic',
+    'overlayColor'		: '#000',
+    'overlayOpacity'	: 0.9
+  });
+  
+  $('a#single_image[title]').qtip({
+    style: {
+      classes: 'ui-tooltip-tipsy ui-tooltip-shadow'
+    },
+    position: {
+       my: 'top left',
+       target: 'mouse',
+       viewport: $(window), // Keep it on-screen at all times if possible
+       adjust: {
+          x: 10,  y: 10
+       }
+    },
+    show: {
+       delay: 1000
+    },
+    hide: {
+       fixed: true // Helps to prevent the tooltip from hiding ocassionally when tracking!
+    },
+  });
+    
+    /* Using custom settings */
+    
+    $("a#inline").fancybox({
+      'hideOnContentClick': true
+    });
+    
+    /* Apply fancybox to multiple items */
+    
+   $("a.group").fancybox({
+      'titlePosition'		: 'outside',
+      'overlayColor'		: '#000',
+      'overlayOpacity'	: 0.9
+    });
+
 });
+
+
 <% end %>

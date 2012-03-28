@@ -16,6 +16,29 @@ $(document).ready(function() {
     size: <%= @count %>,
     start: <%= @index_of.to_i+1 %>,
 
-  });  
+  });
+  
+  $("a#single_image").fancybox({
+    'titlePosition'		: 'outside',
+    'transitionIn'	: 'elastic',
+    'overlayColor'		: '#000',
+    'overlayOpacity'	: 0.9
+  });
+    
+    /* Using custom settings */
+    
+    $("a#inline").fancybox({
+      'hideOnContentClick': true
+    });
+    
+    /* Apply fancybox to multiple items */
+    
+   $("a.group").fancybox({
+      'titlePosition'		: 'outside',
+      'overlayColor'		: '#000',
+      'overlayOpacity'	: 0.9
+    });
+  
 });
+
 <% end %>

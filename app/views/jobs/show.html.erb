@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @job.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @job.description %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= image_tag @job.image.url %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_admin_job_path(@job) %> |
+<%= link_to 'Back', admin_jobs_path %>

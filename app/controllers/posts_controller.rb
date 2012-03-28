@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-
+  layout 'public'
+  
   # GET /posts
   # GET /posts.json
   def index
@@ -7,6 +8,9 @@ class PostsController < ApplicationController
     @count = Post.all.count
     @num_nexts = Post.where("date > :post_date", {:post_date => @post.date}).count
     @index_of = 0
+    @contact_form = ContactForm.new(params[:contact_form])
+    
+    @jobs = Job.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,9 +48,11 @@ class PostsController < ApplicationController
       @post = Post.order("date DESC").last
     end
     
+    @jobs = Job.all
     @count = Post.all.count
     @num_nexts = Post.where("date > :post_date", {:post_date => @post.date}).count
-    
+    @contact_form = ContactForm.new
+        
     if params[:index_of]
       @index_of = params[:index_of]
     else

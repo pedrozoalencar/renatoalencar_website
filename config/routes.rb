@@ -1,4 +1,14 @@
 Ralencar::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  devise_for :users
+
+  
+
+  resources :contact_forms
+
+  resources :jobs
+
   resources :posts do
     member do
       get 'hasNext'
@@ -54,6 +64,9 @@ Ralencar::Application.routes.draw do
       # Directs /admin/products/* to Admin::ProductsController
       # (app/controllers/admin/products_controller.rb)
       resources :posts
+      resources :jobs
+      resources :contact_forms
+
     end
 
   # You can have the root of your site routed with "root"
@@ -61,6 +74,7 @@ Ralencar::Application.routes.draw do
   # root :to => 'welcome#index'
   
   root :to => 'posts#show'
+  #root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 

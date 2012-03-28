@@ -1,0 +1,32 @@
+<%= form_for(@contact_form, :remote => true) do |f| %>
+  <p class="contact_description">Se deseja entrar em contato preencha o formulário abaixo.</p>
+    <div class="contact_form">
+    <div class="contact_div_top">
+      <div class="selo_div"><%= image_tag "selo.png", :size=>"135x66", :alt=>"Selo" %></div>
+      <div class="notice_success"><span></span></div>
+      <div class="btn_enviar_div"><%= image_submit_tag("btn_enviar.png", :style=>"width:160px;height:46px", :alt=>"Selo", :id=>"contact_form_submit") %></div>
+    </div>
+    <div class="contact_div_middle">
+      <div class="contact_div_fields_left">
+        <div class="name_field_line">
+          <%= f.label t(:name) %><br/>
+          <%= f.text_field :name %>
+        </div>
+        <div class="email_field_line">
+          <%= f.label t(:email) %><br/>
+          <%= f.text_field :email %>
+        </div>
+        <div class="subject_field_line">
+          <%= f.label t(:subject) %><br/>
+          <%= f.text_field :subject %>
+        </div>
+      </div>
+      <div class="contact_div_fields_right">
+        <div class="description_field_line">
+          <%= f.label t(:description) %><br/>
+          <%= f.text_area :description %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

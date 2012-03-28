@@ -1,0 +1,8 @@
+<% @jobs.each do |job| %>
+  <div class="pictureWorks">
+    <a id="single_image" href="<%= job.image.url(:medium)%>" title="<%= '<b>' + 
+    job.title + '</b><br/>' + job.description %>">
+      <%= image_tag job.image.url(:thumb) %>
+    </a>
+  </div>
+<% end %>

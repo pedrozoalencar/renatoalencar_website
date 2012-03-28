@@ -10,7 +10,11 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
-//= require_tree .
-//= require tinymce-jquery
+//= require contact_forms
+//= require date.format
+//= require jobs
+//= require jquery_lib
+//= require main
+//= require posts
+//= require utils
+//= require ckeditor/ckeditor
