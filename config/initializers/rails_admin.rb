@@ -134,20 +134,22 @@ RailsAdmin.config do |config|
   #   create do; end
   #   update do; end
   # end
-  # config.model Post do
-  #   # Found associations:
-  #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :title, :string 
-  #     configure :date, :datetime 
-  #     configure :content, :text 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
+   config.model Post do
+     # Found associations:
+     # Found columns:
+       configure :id, :integer 
+       configure :title, :string 
+       configure :date, :datetime 
+       configure :content, :text do
+          ckeditor true
+       end
+       configure :created_at, :datetime 
+       configure :updated_at, :datetime   #   # Sections:
+     list do; end
+     export do; end
+     show do; end
+     edit do; end
+     create do; end
+     update do; end
+   end
 end
