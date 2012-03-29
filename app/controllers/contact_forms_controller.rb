@@ -1,6 +1,5 @@
 class ContactFormsController < ApplicationController
-  layout 'public'
-  respond_to :json
+  respond_to :json,:js,:html,:xml
   
   # GET /contact_forms
   # GET /contact_forms.json

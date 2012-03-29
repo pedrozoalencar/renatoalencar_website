@@ -83,7 +83,7 @@
 		
 		
 		// On Submit Contact Us Form
-		$('#contact_form_submit').click(function() {	
+		$('#contact_form_submit').click(function() {	 
 			$.ajax({
 				url:'/contact_forms',
 				type: 'POST',
