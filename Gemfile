@@ -34,6 +34,7 @@ end
 gem 'jquery-rails'
 gem 'tinymce-rails'
 gem "paperclip", "~> 2.0"
+gem 'aws-sdk'
 gem 'rails-i18n'
 gem 'validates_email_format_of', :git => 'git://github.com/alexdunae/validates_email_format_of.git'
 gem 'fastercsv' # Only required on Ruby 1.8 and below
