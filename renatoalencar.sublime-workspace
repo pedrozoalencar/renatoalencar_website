@@ -1,0 +1,1042 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"no",
+				"no-repeat  (value)"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"row",
+				"row-chamada-bloco"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fot",
+				"font-family"
+			],
+			[
+				"item",
+				"item"
+			],
+			[
+				"lorem",
+				"lorem	lorem - One sentence <p>"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "db/schema.rb",
+			"settings":
+			{
+				"buffer_size": 2920,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/contact_forms/_form.html.erb",
+			"settings":
+			{
+				"buffer_size": 1251,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 2244,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/admin/posts_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1777,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/posts_controller.rb",
+			"settings":
+			{
+				"buffer_size": 3990,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/admin/posts/_form.html.erb",
+			"settings":
+			{
+				"buffer_size": 1120,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/main.js",
+			"settings":
+			{
+				"buffer_size": 3566,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/utils.js",
+			"settings":
+			{
+				"buffer_size": 3253,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/index.html",
+			"settings":
+			{
+				"buffer_size": 7962,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 1290,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/public.html.erb",
+			"settings":
+			{
+				"buffer_size": 5192,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 772,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/contact_forms_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1399,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/contact_form.rb",
+			"settings":
+			{
+				"buffer_size": 292,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/locales/pt-BR.yml",
+			"settings":
+			{
+				"buffer_size": 513,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"sub",
+				"Subclim: Set Eclim executable path"
+			],
+			[
+				"su",
+				"Subclim: Set Eclim executable path"
+			],
+			[
+				"Sub",
+				"Subclim: Set Eclim executable path"
+			],
+			[
+				"subclim",
+				"Subclim: Import class under cursor"
+			],
+			[
+				"terminal",
+				"Preferences: Terminal Key Bindings – Default"
+			],
+			[
+				"Terminal",
+				"Preferences: Terminal Settings – User"
+			],
+			[
+				"set eclip",
+				"Subclim: Set Eclim executable path"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Discover",
+				"Package Control: Discover Packages"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Developer/workspace_ruby/ralencar/config/routes.rb",
+		"/Developer/workspace_ruby/ralencar/renatoalencar",
+		"/Developer/workspace_ruby/forex_school/app/assets/stylesheets/my_bootstrap.css.scss",
+		"/Developer/workspace_ruby/forex_school/app/views/layouts/index.html.erb",
+		"/Developer/workspace_ruby/forex_school/app/views/home/index.html.erb",
+		"/Developer/workspace_ruby/forex_school/app/assets/stylesheets/index.css",
+		"/Developer/workspace_ruby/forex_school/public/index.css",
+		"/Developer/workspace_ruby/forex_school/app/views/customers/index.html.erb",
+		"/Developer/workspace_ruby/forex_school/public/index.html",
+		"/Developer/workspace_ruby/forex_school/app/mailers/user_mailer.rb",
+		"/Developer/workspace_ruby/forex_school/config/initializers/mail.rb",
+		"/Developer/workspace_ruby/forex_school/config/environments/production.rb",
+		"/Developer/workspace_ruby/forex_school/config/environment.rb",
+		"/Developer/workspace_ruby/forex_school/config/routes.rb",
+		"/Developer/workspace_ruby/forex_school/app/controllers/purchases_controller.rb",
+		"/Developer/workspace_ruby/forex_school/config/pagseguro.yml",
+		"/Developer/workspace_ruby/forex_school/db/migrate/20120705121010_create_purchases.rb",
+		"/Developer/workspace_ruby/forex_school/db/migrate/20120705121848_create_customers.rb",
+		"/Developer/workspace_ruby/forex_school/db/migrate/20120705122126_add_column_customer_id_purchase.rb",
+		"/Developer/workspace_ruby/forex_school/Gemfile",
+		"/Developer/workspace_ruby/forex_school/forex_shool.sublime-project",
+		"/Developer/workspace_legisdata/MonitoracaoRelatorioMBean/src/br/com/sicoob/sisbr/monitoracao/relatorio/ejb/jmx/ComponenteServicoTest.java",
+		"/Developer/workspace_legisdata/MonitoracaoRelatorioMBean/src/br/com/sicoob/sisbr/monitoracao/relatorio/ejb/jmx/AreaServicoTest.java",
+		"/Users/Renato/Library/Application Support/Sublime Text 2/Packages/Terminal/Default (OSX).sublime-keymap",
+		"/Users/Renato/Library/Application Support/Sublime Text 2/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/Renato/Library/Application Support/Sublime Text 2/Packages/User/Terminal.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Developer/workspace_ruby/forex_school/config"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"new_contact_form",
+			"anchorLink",
+			"jobs",
+			"resize",
+			"ajax",
+			"<a",
+			"a",
+			"#{i}",
+			"{i}",
+			"download",
+			"ubuntu",
+			"url-image",
+			"))",
+			" %>",
+			"url(<%= asset_path ",
+			"url(",
+			"<img .+?>",
+			"<img",
+			"daddy",
+			"download",
+			"text-ali",
+			"row-button",
+			"      \n",
+			"mail",
+			"class",
+			"\n",
+			"/compra/efetuada",
+			"pagseguro"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"1",
+			"image-url",
+			")",
+			"url-image(",
+			"url(<%= asset_path 'bg_06.jpg' %>",
+			"",
+			"<%= image_tag \"logo_company_04.png\" %><img",
+			"/purchase/completed",
+			"Searching",
+			"true"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 13,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "db/schema.rb",
+					"settings":
+					{
+						"buffer_size": 2920,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1037,
+								798
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/contact_forms/_form.html.erb",
+					"settings":
+					{
+						"buffer_size": 1251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								524,
+								524
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 2244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								311
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/admin/posts_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1777,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/posts_controller.rb",
+					"settings":
+					{
+						"buffer_size": 3990,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/admin/posts/_form.html.erb",
+					"settings":
+					{
+						"buffer_size": 1120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/assets/javascripts/main.js",
+					"settings":
+					{
+						"buffer_size": 3566,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2307,
+								2323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1110.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/assets/javascripts/utils.js",
+					"settings":
+					{
+						"buffer_size": 3253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								270,
+								276
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/views/layouts/index.html",
+					"settings":
+					{
+						"buffer_size": 7962,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4967,
+								4967
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1622.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 1290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								285,
+								285
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/views/layouts/public.html.erb",
+					"settings":
+					{
+						"buffer_size": 5192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5006,
+								5006
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/assets/javascripts/application.js",
+					"settings":
+					{
+						"buffer_size": 772,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								771,
+								771
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "app/controllers/contact_forms_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1399
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 265.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "app/models/contact_form.rb",
+					"settings":
+					{
+						"buffer_size": 292,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								287,
+								40
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "config/locales/pt-BR.yml",
+					"settings":
+					{
+						"buffer_size": 513,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								513,
+								513
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"contac",
+				"app/models/contact_form.rb"
+			],
+			[
+				"pt",
+				"config/locales/pt-BR.yml"
+			],
+			[
+				"contact",
+				"app/models/contact_form.rb"
+			],
+			[
+				"contact_form",
+				"app/controllers/contact_forms_controller.rb"
+			],
+			[
+				"contact_form_controller",
+				"app/controllers/contact_forms_controller.rb"
+			],
+			[
+				"public",
+				"app/views/layouts/public.html.erb"
+			],
+			[
+				"",
+				"app/views/contact_forms/_form.html.erb"
+			],
+			[
+				".js",
+				"app/assets/javascripts/main.js"
+			],
+			[
+				"index",
+				"app/views/layouts/index.html"
+			],
+			[
+				"application.html",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"_form",
+				"app/views/contact_forms/_form.html.erb"
+			],
+			[
+				"application.js",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"application",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"layouts",
+				"app/views/layouts/public.html.erb"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"main.js",
+				"app/assets/javascripts/main.js"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"postform",
+				"app/views/admin/posts/_form.html.erb"
+			],
+			[
+				"postscontr",
+				"app/controllers/posts_controller.rb"
+			],
+			[
+				"adminpos",
+				"app/controllers/admin/posts_controller.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"posts_controller",
+				"app/controllers/admin/posts_controller.rb"
+			],
+			[
+				"form",
+				"app/views/contact_forms/_form.html.erb"
+			],
+			[
+				"pagse",
+				"tmp/pagseguro-development.yml"
+			],
+			[
+				"my",
+				"app/assets/stylesheets/my_bootstrap.css.scss"
+			],
+			[
+				"purchase",
+				"app/controllers/purchases_controller.rb"
+			],
+			[
+				"applicationjs",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"application.css",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"index.css",
+				"app/assets/stylesheets/index.css"
+			],
+			[
+				"inex",
+				"public/index.css"
+			],
+			[
+				"inde.html.e",
+				"app/views/customers/index.html.erb"
+			],
+			[
+				"home/index",
+				"app/views/home/index.html.erb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"index.html.erb",
+				"app/views/layouts/index.html.erb"
+			],
+			[
+				"user",
+				"app/mailers/user_mailer.rb"
+			],
+			[
+				"purchases",
+				"app/controllers/purchases_controller.rb"
+			],
+			[
+				"vari",
+				"public/bootstrap/less/variables.less"
+			],
+			[
+				"index.",
+				"public/index.html"
+			],
+			[
+				"maile",
+				"app/mailers/user_mailer.rb"
+			],
+			[
+				"user_",
+				"app/mailers/user_mailer.rb"
+			],
+			[
+				"produ",
+				"config/environments/production.rb"
+			],
+			[
+				"env",
+				"config/environment.rb"
+			],
+			[
+				"migra",
+				"db/migrate/20120705121010_create_purchases.rb"
+			],
+			[
+				"purchase_controller",
+				"app/controllers/purchases_controller.rb"
+			],
+			[
+				"add_c",
+				"db/migrate/20120705122126_add_column_customer_id_purchase.rb"
+			],
+			[
+				"pag",
+				"config/pagseguro.yml"
+			],
+			[
+				"test",
+				"src/br/com/sicoob/sisbr/monitoracao/relatorio/ejb/jmx/ComponenteServicoTest.java"
+			],
+			[
+				"areaservico",
+				"src/br/com/sicoob/sisbr/monitoracao/relatorio/ejb/jmx/AreaServicoTest.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Developer/workspace_ruby/forex_school/forex_shool.sublime-project"
+			],
+			[
+				"agenc",
+				"/Developer/workspace_ruby/agenciawebnow/agenciawebnow.sublime-project"
+			],
+			[
+				"renatoalencar",
+				"/Developer/workspace_ruby/ralencar/renatoalencar.sublime-project"
+			],
+			[
+				"agencia",
+				"/Developer/workspace_ruby/agenciawebnow/agenciawebnow.sublime-project"
+			],
+			[
+				"i",
+				"/Developer/workspace_ruby/imestre/imestre.sublime-project"
+			],
+			[
+				"ime",
+				"/Developer/workspace_ruby/imestre/imestre.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 203.0,
+	"status_bar_visible": true
+}

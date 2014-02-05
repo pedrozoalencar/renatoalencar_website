@@ -14,6 +14,7 @@
 //= require date.format
 //= require jobs
 //= require jquery_lib
+//= require jquery
 //= require main
 //= require posts
 //= require utils
